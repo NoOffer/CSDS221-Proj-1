@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.css'>
+    <link rel="stylesheet" href="css/index.css">
+    
+    <script src="jquery-3.6.4.min.js"></script>
+    <!-- <script src="js/bootstrap.js"></script> -->
+    <script type="text/javascript" src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.js'></script>
+    <script src="https://kit.fontawesome.com/b6810b08c6.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Bootstrap Booking Form</h1>
+        <div class="well">Fill out this form and press "SUBMIT" when finish.</div>
+        <div class="row">
+            <div class="col col-md-6" id="left-col">
+                <div class="panel" id="user-info">
+                    <div class="panel-heading">User Info</div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" class="form-control" placeholder="Type Username..." id="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="fn">First Name:</label>
+                            <input type="text" class="form-control" placeholder="Type First Name..." id="fn">
+                        </div>
+                        <div class="form-group">
+                            <label for="ln">Last Name:</label>
+                            <input type="text" class="form-control" placeholder="Type Last Name..." id="ln">
+                        </div>
+                    </div>
+                </div>
+                <div class="panel" id="contacts">
+                    <div class="panel-heading">Contacts: </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label class="input-group-addon fa-solid fa-phone"></label>
+                            <input type="text" class="form-control" placeholder="Type Phone #..." id="email">
+                        </div>
+                        <div class="form-group">
+                            <label class="input-group-addon fa-solid fa-fax"></label>
+                            <input type="text" class="form-control" placeholder="Type Fax #..." id="email">
+                        </div>
+                        <div class="form-group">
+                            <label class="input-group-addon fa-solid fa-envelope"></label>
+                            <input type="email" class="form-control" placeholder="Type Email..." id="email">
+                        </div>
+                    </div>
+                </div>
+                <div class="panel" id="schedule">
+                    <div class="panel-heading">Schedule: </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label>Adult(s):</label>
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" id="adult-num"># of Adult(s)...<span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a onclick="setAdultNum(1)">1</a></li>
+                                    <li><a onclick="setAdultNum(2)">2</a></li>
+                                    <li><a onclick="setAdultNum(3)">3</a></li>
+                                    <li><a onclick="setAdultNum(4)">4</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-md-6">
+                            <div class="form-group">
+                                <label>Check-In:</label>
+                                <div class="date" data-provide="datepicker" id="date">
+                                    <input type="date" class="form-control" onchange="onChangeCheckInDate()" id="date-picker-in">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Day(s):</label>
+                                <div class="well" id="day-display">Day</div>
+                            </div>
+                        </div>
+                        <div class="col col-md-6">
+                            <div class="form-group">
+                                <label>Check-Out:</label>
+                                <div class="date" data-provide="datepicker" id="date">
+                                    <input type="date" class="form-control" onchange="onChangeCheckOutDate()" id="date-picker-out">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Cost($):</label>
+                                <div class="well" id="cost-display">Cost</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-6" id="right-col">
+                <div class="panel" id="other">
+                    <div class="panel-heading">Other: </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label>Message:</label>
+                            <textarea name="message" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Range:</label>
+                            <div class="slidecontainer">
+                                <input type="range" min="5" max="10" value="5" class="slider">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Priority:</label>
+                            <div id="priority">
+                                <div>
+                                    <input type="radio">
+                                    <label>High</label>
+                                </div>
+                                <div>
+                                    <input type="radio">
+                                    <label>Medium</label>
+                                </div>
+                                <div>
+                                    <input type="radio">
+                                    <label>Low</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="solid">
+        <div class="form-group" id="options">
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.opacity = '0';">&times;</span>
+                Form Reset
+            </div>
+            <button onclick="submit()" id="submit">SUBMIT</button>
+            <button onclick="reset()" id="reset">RESET</button>
+        </div>
+    </div>
+</body>
+</html>

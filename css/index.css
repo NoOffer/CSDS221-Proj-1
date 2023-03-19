@@ -1,0 +1,227 @@
+body{
+    background-color: #1d1d1f;
+    color: #f5f5f7;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+h1{
+    color: #ffaa00;
+}
+
+div[class="well"]{
+    background-color: #33333a;
+    border: 0;
+}
+
+div[class="panel"]{
+    background-color: #1d1d1f;
+    border-color: #ffaa00;
+}
+
+div[class="panel-heading"]{
+    background-color: #ffaa00;
+    color: #1d1d1f;
+    border-color: #ffaa00;
+}
+
+div[class="panel-body"]{
+    background-color: #1d1d1f;
+    border-color: #ffaa00;
+}
+
+div[id="user-info"]{
+    white-space: nowrap;
+}
+
+div[id="user-info"] label{
+    width: 50%;
+    display: inline-block;
+}
+
+div[id="user-info"] input[type="text"]{
+    width: 50%;
+    display: inline-block;
+}
+
+div[id="contacts"] label{
+    width: 9%;
+    background-color: #1d1d1f;
+    color: #ffaa00;
+    border: 0;
+    display: inline-block;
+    text-align:center;
+}
+
+div[id="contacts"] input[type="text"]{
+    width: 90%;
+}
+
+div[id="contacts"] input[type="email"]{
+    width: 90%;
+}
+
+button{
+    background-color: #1d1d1f;
+    color: #f5f5f7;
+    border: 2px solid #ffaa00;
+}
+
+button:hover{
+    background-color: #ffaa00;
+    color: #1d1d1f;
+    border: 2px solid #ffaa00;
+}
+
+button:focus{
+    background-color: #ffaa00;
+    color: #1d1d1f;
+    border: 2px solid #ffaa00;
+}
+
+div[id="schedule"] div[id="date"]{
+    white-space: nowrap;
+}
+
+div[id="schedule"] div[id="date"] input[type="date"]{
+    width: 100%;
+    background-color: #1d1d1f;
+    color: #f5f5f7;
+    border: 1px solid #ffaa00;
+    display: inline-block;
+}
+
+div[id="schedule"] div[id="date"] input[type="date"]::-webkit-calendar-picker-indicator{
+    background-color: #ffaa00;
+    border-radius: 20%;
+}
+
+div[id="schedule"] button[data-toggle="dropdown"]{
+    width: 50%;
+    text-align: left;
+    border: 1px solid #ffaa00;
+}
+
+div[id="schedule"] div[class="col col-md-6"]{
+    padding-left: 0;
+    padding-right: 1em;
+}
+
+div[id="day-display"]{
+    height: 2.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+div[id="cost-display"]{
+    height: 2.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+input[type="text"]{
+    background-color: #33333a;
+    color: #f5f5f7;
+    border: 0;
+    display: inline-block;
+}
+
+input[type="email"]{
+    background-color: #33333a;
+    color: #f5f5f7;
+    border: 0;
+    display: inline-block;
+}
+
+.dropdown ul{
+    border: 2px solid #ffaa00;
+}
+
+div[id="other"] div[class="form-group"]{
+    margin: 1em;
+}
+
+div[id="other"] textarea{
+    width: 100%;
+    height: 37.5em;
+    resize: none;
+    background-color: #33333a;
+    border: 2px solid #ffaa00;
+}
+
+div[id="other"] div[id="priority"] div{
+    margin-right: 1em;
+    display: inline-block;
+}
+
+hr[class="solid"]{
+    border: 1px solid #ffaa00;
+}
+
+div[id="options"]{
+    width: 100%;
+    padding: 0;
+}
+
+button[id="submit"]{
+    height: 4rem;
+    width: 10%;
+    float: right;
+    background-color: #1d1d1f;
+    color: #ffaa00;
+    border: 2px solid #ffaa00;
+    border-radius: 2rem;
+    margin: 0;
+}
+
+button[id="reset"]{
+    height: 4rem;
+    width: 10%;
+    float: right;
+    background-color: #1d1d1f;
+    color: #ffaa00;
+    border: 2px solid #ffaa00;
+    border-radius: 2rem;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+button[id="reset"]:active{
+    background-color: #ffaa00;
+    color: #1d1d1f;
+    border: #ffaa00;
+    border-radius: 2rem;
+}
+
+button[id="submit"]:active{
+    background-color: #ffaa00;
+    color: #1d1d1f;
+    border: #ffaa00;
+    border-radius: 2rem;
+}
+
+div[class="alert"]{
+    float: left;
+    height: 4rem;
+    width: 70%;
+    padding-top: 0.6em;
+    padding-left: 5%;
+    background-color: #ffaa00;
+    color: #1d1d1f;
+    border: 1px solid #ffaa00;
+    border-radius: 2rem;
+    
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+div[class="alert"] span{
+    margin-left: 1em;
+    margin-right: 1em;
+}
